@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh "mkdir abc"
+                sh " ls -l"
+                sh "pwd"
             }
         }
         stage('Test') {
