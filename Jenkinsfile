@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building..';/
+                sh "mkdir abc"
             }
         }
         stage('Test') {
