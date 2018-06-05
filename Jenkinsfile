@@ -16,6 +16,7 @@ pipeline {
 				mkdir pqr
 			}
 	        }
+		
 		stage('rm command'){
 			steps{
 				rm -r abc;/
