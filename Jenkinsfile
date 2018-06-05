@@ -1,21 +1,27 @@
 pipeline {
 	agent any
 	stages{
-		steps(ls commands){	
-			ls -l;/
-			ls -a;/
-			ls -li
+		stage('ls commands'){
+			steps{
+				ls -l;/
+				ls -a;/
+				ls -li
+			}
 		}
 	
-		steps(mkdir command){
-			mkdir abc;/
-			mkdir xyx;/
-			mkdir pqr
+		stage('mkdir command'){
+			steps{
+				mkdir abc;/
+				mkdir xyx;/
+				mkdir pqr
+			}
 	        }
-		steps(rm command){
-			rm -r abc;/
-			rm -r xyx;/
-			rm -r pqr
+		stage('rm command'){
+			steps{
+				rm -r abc;/
+				rm -r xyx;/
+				rm -r pqr
+			}
 		}
 	}
 }
