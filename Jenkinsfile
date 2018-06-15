@@ -20,5 +20,12 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('MySql install') {
+            steps { 
+                sh "sudo apt-get update"
+                sh "sudo apt-get install mysql-server"
+                sh "sudo ufw allow mysql"
+            }
+        }    
     }
 }
