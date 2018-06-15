@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh "rm -r xyz"
                 sh "mkdir xyz"
                 sh " ls -l"
                 sh "pwd"
