@@ -21,7 +21,7 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('MySql install') {
+        stage('MySql installation') {
             steps { 
                 sh "sudo apt-get update"
                 sh "sudo apt-get install mysql-server"
