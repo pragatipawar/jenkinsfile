@@ -24,8 +24,10 @@ pipeline {
         stage('MySql installation') {
             steps { 
                 sh "sudo apt-get update"
-                sh "sudo apt-get install -y mysql-server"
-                sh "sudo ufw allow mysql"
+                //sh "sudo apt-get install -y mysql-server"
+                //sh "sudo ufw allow mysql"
+                sh "export DEBIAN_FRONTEND=noninteractive"
+                sh "aptitude -y install mysql-server > /dev/null 2>&1"
             }
         }    
     }
